@@ -48,5 +48,5 @@ You can use it like this:
 ```php
 use Smart;
 
-Globe::send('phone_number', 'message', 'username', 'password');
+Smart::send('phone_number', 'message', 'username', 'password');
 ```
