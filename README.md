@@ -20,7 +20,7 @@ A Laravel wrapper for sending SMS through [Smart Connect SMS API](https://messag
 You can install `laravel-smartconnect` package via composer.
 
 ```
-composer require coredev/laravel-smartconnect
+composer require coredevsolutions/laravel-smartconnect
 ```
 
 
