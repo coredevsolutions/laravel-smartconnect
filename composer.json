@@ -1,5 +1,5 @@
 {
-    "name": "coredev/laravel-smartconnect",
+    "name": "coredevsolutions/laravel-smartconnect",
     "description": "A Laravel wrapper for sending SMS through Smart Connect SMS API.",
     "require": {
         "guzzlehttp/guzzle": "^6.3",
