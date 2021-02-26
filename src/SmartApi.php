@@ -14,7 +14,7 @@ class SmartApi
         $this->client = $client;
     }
 
-    public function send(string $number, string $message, string $username, string $password) {
+    public function send(string $number, string $message, string $username, string $password, ?string $sourceNumber = null) {
         $authentication = Cache::remember('smart-sms-auth-token-' . $username, Carbon::now()->addMinutes(30), function() use ($username, &$password) {
             return json_decode($this->client->post('/rest/auth/login', [
                 'json' => [
@@ -30,6 +30,7 @@ class SmartApi
             ],
             'json' => [
                 'messageType' => 'sms',
+                'source' => $sourceNumber,
                 'destination' => $number,
                 'text' => $message
             ]
